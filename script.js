@@ -7,5 +7,5 @@ function getJSON(url){
 }
 
 window.onload = function() {
-    console.log(getJSON("./init.json"));
+    console.log(getJSON("/init.json"));
 }
