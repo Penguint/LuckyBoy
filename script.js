@@ -15,13 +15,25 @@ function parseToMemberList(profileList) {
         member.selected = true;
         member.weight = 1;
     });
-    return(profileList);
+    return (profileList);
 }
+function printMemberList(memberList, table) {
+    var newRow = document.querySelector("template.member-row");
 
+    memberList.forEach(member => {
+        newRow.content.querySelector(".selected").childNodes[1].value = member.selected ? "on" : "off";
+        newRow.content.querySelector(".name").childNodes[1].value = member.name;
+        newRow.content.querySelector(".selected").childNodes[1].value = member.weight;
+        table.appendChild(document.importNode(newRow.content, true));
+    })
+}
 window.onload = function () {
     getJSON("init.json", profileList => {
         // console.log(profileList);
         var memberList = parseToMemberList(profileList);
-        console.log(memberList);
+        // console.log(memberList);
+        var memberTable = document.querySelector("table.member-list tbody");
+
+        printMemberList(memberList, memberTable);
     });
 }
