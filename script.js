@@ -1,11 +1,15 @@
-function getJSON(url){
+function getJSON(url, callback){
     let xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = () => {
+        callback(xhr.responseText);
+    };
     xhr.open("GET", url, true);
     xhr.send();
 
-    return(xhr.responseText);
 }
 
 window.onload = function() {
-    console.log(getJSON("init.json"));
+    getJSON("init.json", (text) => {
+        console.log(text);
+    });
 }
