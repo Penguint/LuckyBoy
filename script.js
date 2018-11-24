@@ -23,7 +23,7 @@ function printMemberList(memberList, table) {
     memberList.forEach(member => {
         newRow.content.querySelector(".selected").childNodes[1].value = member.selected ? "on" : "off";
         newRow.content.querySelector(".name").childNodes[1].value = member.name;
-        newRow.content.querySelector(".selected").childNodes[1].value = member.weight;
+        newRow.content.querySelector(".weight").childNodes[1].value = member.weight;
         table.appendChild(document.importNode(newRow.content, true));
     })
 }
