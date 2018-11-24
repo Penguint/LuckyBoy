@@ -1,7 +1,7 @@
 function getJSON(url, callback) {
     let xhr = new XMLHttpRequest();
     xhr.onreadystatechange = () => {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        if (xhr.readyState == 4 && xhr.status == 200) {
             callback(xhr.responseText);
         }
     };
