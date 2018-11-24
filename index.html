@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>Lucky Boy - A lottery system</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+
+<body>
+    <h1>Who is the lucky boy?</h1>
+    <p contenteditable="true">抽奖标题</p>
+    <div class="main-container">
+        <div class="input-container">
+            <table class="member-list">
+                <thead>
+                    <th></th>
+                    <th>姓名</th>
+                    <th>权重</th>
+                </thead>
+                <tbody></tbody>
+                <template class="member-template">
+                    <tr>
+                        <td class="chosen">
+                            <input type="checkbox">
+                        </td>
+                        <td class="name">
+                            <input type="text">
+                        </td>
+                        <td class="weight">
+                            <input type="text">
+                        </td>
+                    </tr>
+                </template>
+            </table>
+        </div>
+        <div class="number-of-places">
+            <input type="text">
+        </div>
+        <div class="output-container">
+            <table class="result-list">
+                <tbody></tbody>
+                <template class="member-template">
+                    <tr>
+                        <td class="name">
+                            <span></span>
+                        </td>
+                    </tr>
+                </template>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
