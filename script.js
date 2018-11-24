@@ -21,7 +21,7 @@ function printMemberList(memberList, table) {
     var newRow = document.querySelector("template.member-row");
 
     memberList.forEach(member => {
-        newRow.content.querySelector(".selected").childNodes[1].value = member.selected ? "on" : "off";
+        newRow.content.querySelector(".selected").childNodes[1].checked = member.selected ? "on" : "off";
         newRow.content.querySelector(".name").childNodes[1].value = member.name;
         newRow.content.querySelector(".weight").childNodes[1].value = member.weight;
         table.appendChild(document.importNode(newRow.content, true));
