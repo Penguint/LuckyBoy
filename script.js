@@ -10,8 +10,18 @@ function getJSON(url, callback) {
 
 }
 
+function parseToMemberList(profileList) {
+    profileList.forEach(member => {
+        member.selected = true;
+        member.weight = 1;
+    });
+    return(profileList);
+}
+
 window.onload = function () {
-    getJSON("init.json", (json) => {
-        console.log(json);
+    getJSON("init.json", profileList => {
+        // console.log(profileList);
+        var memberList = parseToMemberList(profileList);
+        console.log(memberList);
     });
 }
