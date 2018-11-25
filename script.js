@@ -78,12 +78,12 @@ window.onload = function () {
         var memberList = parseToMemberList(profileList);
         // console.log(memberList);
         var memberTable = document.querySelector("table.member-list tbody");
-        printMemberList(memberList, memberTable);
 
-        var num = document.querySelector("#input-number-of-places").value;
+        printMemberList(memberList, memberTable);
 
         var resultTable = document.querySelector("table.result-list tbody");
         document.querySelector(".generate-btn").onclick = () => {
+            var num = document.querySelector("#input-number-of-places").value;
             printResultList(choose(memberList, num), resultTable);
         }
     });
