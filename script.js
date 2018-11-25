@@ -43,6 +43,18 @@ function printResultList(memberList, table) {
     })
 }
 
+function loadMemberList() {
+    var memberList = [];
+    document.querySelectorAll("table#member-list tbody tr").forEach(memberElement => {
+        memberList.push({
+            selected: memberElement.querySelector(".selected input").checked,
+            name: memberElement.querySelector(".name input").value,
+            weight: memberElement.querySelector(".weight input").value
+        })
+    });
+    return memberList;
+}
+
 function choose(memberList, num) {
     var selectedMemberList = [];
     
@@ -83,6 +95,7 @@ window.onload = function () {
 
         var resultTable = document.querySelector("table.result-list tbody");
         document.querySelector(".generate-btn").onclick = () => {
+            memberList = loadMemberList();
             if (document.activeElement != document.querySelector("#input-number-of-places")) {
                 var num = document.querySelector("#input-number-of-places").value;
                 printResultList(choose(memberList, num), resultTable);
