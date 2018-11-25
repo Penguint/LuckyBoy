@@ -18,6 +18,8 @@ function parseToMemberList(profileList) {
     return (profileList);
 }
 function printMemberList(memberList, table) {
+    table.innerHTML = "";
+
     var newRow = document.querySelector("template.member-row");
 
     memberList.forEach(member => {
@@ -29,6 +31,8 @@ function printMemberList(memberList, table) {
 }
 
 function printResultList(memberList, table) {
+    table.innerHTML = "";
+
     var newRow = document.querySelector("template.result-row");
 
     memberList.forEach(member => {
@@ -74,14 +78,12 @@ window.onload = function () {
         var memberList = parseToMemberList(profileList);
         // console.log(memberList);
         var memberTable = document.querySelector("table.member-list tbody");
-        resultTable.innerHTML = "";
         printMemberList(memberList, memberTable);
 
         var num = document.querySelector("#input-number-of-places").value;
 
         var resultTable = document.querySelector("table.result-list tbody");
         document.querySelector(".generate-btn").onclick = () => {
-            resultTable.innerHTML = "";
             printResultList(choose(memberList, num), resultTable);
         }
     });
