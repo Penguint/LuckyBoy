@@ -83,7 +83,7 @@ window.onload = function () {
 
         var resultTable = document.querySelector("table.result-list tbody");
         document.querySelector(".generate-btn").onclick = () => {
-            if (document.activeElement != document.querySelector("#input-number-of-places") {
+            if (document.activeElement != document.querySelector("#input-number-of-places")) {
                 var num = document.querySelector("#input-number-of-places").value;
                 printResultList(choose(memberList, num), resultTable);
             }
