@@ -29,13 +29,31 @@ function printMemberList(memberList, table) {
 }
 
 function choose(memberList, num) {
+    var selectedMemberList = [];
+    
+    // filter
     memberList.forEach(e => {
+        if (e.selected) {
+            selectedMemberList.push(e);
+        }
+    })
+
+    // initially shuffle
+    selectedMemberList.forEach(e => {
+        e.sortValue = Math.random();
+    })
+    selectedMemberList.sort((a, b) => {
+        return b.sortValue - a.sortValue;
+    })
+
+    // sort
+    selectedMemberList.forEach(e => {
         e.sortValue = e.weight * Math.random();
     })
-    memberList.sort((a, b) => {
-        b.sortValue - a.sortValue;
+    selectedMemberList.sort((a, b) => {
+        return b.sortValue - a.sortValue;
     })
-    return(memberList.slice(0, num));
+    return(selectedMemberList.slice(0, num));
 }
 
 window.onload = function () {
