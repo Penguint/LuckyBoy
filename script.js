@@ -74,12 +74,14 @@ window.onload = function () {
         var memberList = parseToMemberList(profileList);
         // console.log(memberList);
         var memberTable = document.querySelector("table.member-list tbody");
+        resultTable.innerHTML = "";
         printMemberList(memberList, memberTable);
 
         var num = document.querySelector("#input-number-of-places").value;
 
         var resultTable = document.querySelector("table.result-list tbody");
         document.querySelector(".generate-btn").onclick = () => {
+            resultTable.innerHTML = "";
             printResultList(choose(memberList, num), resultTable);
         }
     });
