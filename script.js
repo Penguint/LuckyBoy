@@ -27,14 +27,28 @@ function printMemberList(memberList, table) {
         table.appendChild(document.importNode(newRow.content, true));
     })
 }
+
+function choose(memberList, num) {
+    memberList.forEach(e => {
+        e.sortValue = e.weight * Math.random();
+    })
+    memberList.sort((a, b) => {
+        b.sortValue - a.sortValue;
+    })
+    return(memberList.slice(0, num));
+}
+
 window.onload = function () {
-    console.log(document.querySelector("#input-number-of-places").defaultValue);
+    // console.log(document.querySelector("#input-number-of-places").defaultValue);
     getJSON("init.json", profileList => {
         // console.log(profileList);
         var memberList = parseToMemberList(profileList);
         // console.log(memberList);
         var memberTable = document.querySelector("table.member-list tbody");
-
+        
         printMemberList(memberList, memberTable);
+        var num = document.querySelector("#input-number-of-places").defaultValue;
+        printMemberList(choose(memberList, num), memberTable);
+
     });
 }
