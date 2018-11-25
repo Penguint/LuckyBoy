@@ -28,7 +28,7 @@ function printMemberList(memberList, table) {
     })
 }
 window.onload = function () {
-    console.log(document.querySelector(".number-of-places input").defaultValue);
+    console.log(document.querySelector("#input-number-of-places").defaultValue);
     getJSON("init.json", profileList => {
         // console.log(profileList);
         var memberList = parseToMemberList(profileList);
