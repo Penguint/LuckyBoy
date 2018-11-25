@@ -76,10 +76,11 @@ window.onload = function () {
         var memberTable = document.querySelector("table.member-list tbody");
         printMemberList(memberList, memberTable);
 
-        var num = document.querySelector("#input-number-of-places").defaultValue;
+        var num = document.querySelector("#input-number-of-places").Value;
 
         var resultTable = document.querySelector("table.result-list tbody");
-        printResultList(choose(memberList, num), resultTable);
-
+        document.querySelector(".generate-btn").onclick = () => {
+            printResultList(choose(memberList, num), resultTable);
+        }
     });
 }
