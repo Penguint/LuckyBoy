@@ -76,7 +76,7 @@ window.onload = function () {
         var memberTable = document.querySelector("table.member-list tbody");
         printMemberList(memberList, memberTable);
 
-        var num = document.querySelector("#input-number-of-places").Value;
+        var num = document.querySelector("#input-number-of-places").value;
 
         var resultTable = document.querySelector("table.result-list tbody");
         document.querySelector(".generate-btn").onclick = () => {
