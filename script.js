@@ -28,6 +28,17 @@ function printMemberList(memberList, table) {
     })
 }
 
+function printResultList(memberList, table) {
+    var newRow = document.querySelector("template.result-row");
+
+    memberList.forEach(member => {
+        // newRow.content.querySelector(".selected").childNodes[1].checked = member.selected;
+        newRow.content.querySelector(".name").childNodes[1].innerHTML = member.name;
+        // newRow.content.querySelector(".weight").childNodes[1].value = member.weight;
+        table.appendChild(document.importNode(newRow.content, true));
+    })
+}
+
 function choose(memberList, num) {
     var selectedMemberList = [];
     
@@ -63,10 +74,12 @@ window.onload = function () {
         var memberList = parseToMemberList(profileList);
         // console.log(memberList);
         var memberTable = document.querySelector("table.member-list tbody");
-        
         printMemberList(memberList, memberTable);
+
         var num = document.querySelector("#input-number-of-places").defaultValue;
-        printMemberList(choose(memberList, num), memberTable);
+
+        var resultTable = document.querySelector("table.result-list tbody");
+        printResultList(choose(memberList, num), resultTable);
 
     });
 }
