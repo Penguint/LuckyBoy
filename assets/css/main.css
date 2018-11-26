@@ -1,3 +1,26 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+}
+
+.slogan {
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+}
+
 .main-container {
     display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.output-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
