@@ -19,12 +19,48 @@
     flex-wrap: wrap;
 }
 
+table {
+    font-size: 2em;
+    border-spacing: 0px;
+}
+table input[type=text] {
+    font-size: 1em;
+    border: 0;
+}
 
+table input[type=checkbox] {
+    zoom: 2;
+}
+
+th {
+    padding: 0 15px;
+    margin: 0 20px;
+}
+th * {
+    padding: 10px;
+    border-bottom: 1px solid grey;
+}
+
+td {
+    border-bottom: 1px solid grey;
+    padding: 5px 15px;
+}
+
+.input-container {
+    padding: 30px;
+    border-right: 1px solid grey;
+}
 
 .output-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    padding: 30px;
+}
+
+.inputbox-name {
+    width: 5em;
 }
 
 .inputbox-weight {
