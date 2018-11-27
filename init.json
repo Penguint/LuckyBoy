@@ -1,10 +1,77 @@
 [
     {
-        "name": "汤启喆",
-        "group": "运维"
+        "name": "姜鑫",
+        "group": "运维",
+        "campus": "屏峰"
     },
     {
-        "name": "AAA",
-        "group": "运维"
+        "name": "冯蓥杰",
+        "group": "运维",
+        "campus": "屏峰"
+    },
+    {
+        "name": "许秉灏",
+        "group": "运维",
+        "campus": "屏峰"
+    },
+    {
+        "name": "陈锦泽",
+        "group": "运维",
+        "campus": "屏峰"
+    },
+    {
+        "name": "朱启月",
+        "group": "运维",
+        "campus": "屏峰"
+    },
+    {
+        "name": "康震",
+        "group": "运维",
+        "campus": "屏峰"
+    },
+    {
+        "name": "林家豪",
+        "group": "运维",
+        "campus": "屏峰"
+    },
+    {
+        "name": "林前",
+        "group": "运维",
+        "campus": "朝晖"
+    },
+    {
+        "name": "杨烜",
+        "group": "运维",
+        "campus": "朝晖"
+    },
+    {
+        "name": "陈兴建",
+        "group": "运维",
+        "campus": "朝晖"
+    },
+    {
+        "name": "汤启喆",
+        "group": "运维",
+        "campus": "朝晖"
+    },
+    {
+        "name": "陈征瀚",
+        "group": "运维",
+        "campus": "朝晖"
+    },
+    {
+        "name": "董旭",
+        "group": "运维",
+        "campus": "朝晖"
+    },
+    {
+        "name": "景思翔",
+        "group": "运维",
+        "campus": "朝晖"
+    },
+    {
+        "name": "陈兴迪",
+        "group": "运维",
+        "campus": "朝晖"
     }
 ]
