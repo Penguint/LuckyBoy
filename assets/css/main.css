@@ -86,6 +86,9 @@ td {
 }
 
 .generate-btn {
+    /* display: block; */
+    width: 15em;
+    padding: 0.5em;
     margin: auto;
 }
 
